@@ -8,7 +8,7 @@ public class Singleton {
         this.value = value;
     }
 
-    public static Singleton getSingleton(String value){
+    public synchronized static Singleton getSingleton(String value){
         if(instance == null){
             instance = new Singleton(value);
         }
