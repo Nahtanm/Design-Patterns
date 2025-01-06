@@ -3,6 +3,7 @@ package br.com.nahtanm.build;
 import br.com.nahtanm.build.builder.Builder;
 import br.com.nahtanm.build.builder.CarBuilder;
 import br.com.nahtanm.build.builder.CarManualBuilder;
+import br.com.nahtanm.build.builder.SienaCarBuilder;
 import br.com.nahtanm.build.car.Car;
 import br.com.nahtanm.build.car.Manual;
 import br.com.nahtanm.build.director.Director;
@@ -19,6 +20,10 @@ public class Demo {
         Car car = carBuilder.getCarBuilder();
         Manual manual = carManualBuilder.getManualBuilder();
 
-        System.out.println(car.toString());
+        director.setBuilder2(new SienaCarBuilder());
+
+        Car car1 = director.builderSiena();
+
+        System.out.println(car1.toString());
     }
 }

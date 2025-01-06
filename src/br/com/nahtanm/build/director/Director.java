@@ -1,6 +1,9 @@
 package br.com.nahtanm.build.director;
 
 import br.com.nahtanm.build.builder.Builder;
+import br.com.nahtanm.build.builder.Builder2;
+import br.com.nahtanm.build.builder.SienaCarBuilder;
+import br.com.nahtanm.build.car.Car;
 import br.com.nahtanm.build.car.CarType;
 import br.com.nahtanm.build.components.Engine;
 import br.com.nahtanm.build.components.GPSNavigator;
@@ -8,6 +11,12 @@ import br.com.nahtanm.build.components.Transmission;
 import br.com.nahtanm.build.components.TripComputer;
 
 public class Director {
+
+    private Builder2 builder2;
+
+    public void setBuilder2(Builder2 builder2){
+        this.builder2 = builder2;
+    }
 
     public void builderCityCar(Builder builder){
         builder.setSeats(4);
@@ -34,6 +43,19 @@ public class Director {
         builder.setTransmission(Transmission.SEMI_AUTOMATIC);
         builder.setTripComputer(new TripComputer());
         builder.setGPSNavegator(new GPSNavigator("Rua izidorio gomes "));
+    }
+
+    public Car builderSiena(){
+
+        builder2.setCarType();
+        builder2.setEngine();
+        builder2.setSeats();
+        builder2.setEngine();
+        builder2.setTransmission();
+        builder2.setTripComputer();
+        builder2.setGPSNavegator();
+
+        return builder2.builderCar();
     }
 
 }

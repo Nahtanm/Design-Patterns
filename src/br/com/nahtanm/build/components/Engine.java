@@ -8,7 +8,6 @@ public class Engine {
     public Engine(double volume, double mileage) {
         this.volume = volume;
         this.mileage = mileage;
-
     }
 
     public double getVolume() {
@@ -33,5 +32,14 @@ public class Engine {
 
     public void setStarted(boolean started) {
         this.started = started;
+    }
+
+    @Override
+    public String toString() {
+        return "Engine{" +
+                "volume=" + volume +
+                ", mileage=" + mileage +
+                ", started=" + started +
+                '}';
     }
 }

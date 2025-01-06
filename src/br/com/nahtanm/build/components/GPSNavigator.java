@@ -15,4 +15,11 @@ public class GPSNavigator {
     public void setRoute(String route) {
         this.route = route;
     }
+
+    @Override
+    public String toString() {
+        return "GPSNavigator{" +
+                "route='" + route + '\'' +
+                '}';
+    }
 }

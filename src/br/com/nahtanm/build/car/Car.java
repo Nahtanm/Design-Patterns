@@ -88,7 +88,7 @@ public class Car {
         return "Car{" +
                 "seats=" + seats +
                 ", type=" + type +
-                ", engine=" + engine +
+               ", " +  engine.toString() +
                 ", transmission=" + transmission +
                 ", gpsNavigator=" + gpsNavigator +
                 ", computer=" + computer +
