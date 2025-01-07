@@ -17,7 +17,6 @@ public class Demo {
         macFactory.createButton().paint();
         macFactory.createCheckbox().paint();
 
-
     }
 
 }
